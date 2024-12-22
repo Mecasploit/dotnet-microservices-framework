@@ -1,0 +1,11 @@
+Adding packages :
+{
+  dotnet add package MongoDB.Driver
+  dotnet add package Microsoft.Extensions.Configuration.Binder
+  dotnet add package Microsoft.Extensions.Extensions.DependencyInjection
+}
+
+Packing :
+{
+  dotnet pack -o "path"
+}

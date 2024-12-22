@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Play.Catalog.Service.Settings
+namespace Play.Common.Settings
 {
     public class ServiceSettings
     {
