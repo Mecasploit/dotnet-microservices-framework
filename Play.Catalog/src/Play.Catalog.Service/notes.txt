@@ -1,0 +1,4 @@
+cmds :
+dotnet dev-certs https --trust : to add certificate so that the solution can run.
+docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo : to run the mongodb image
+dotnet new gitignore : to create a git ignore file
