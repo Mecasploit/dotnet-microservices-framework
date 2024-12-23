@@ -4,3 +4,7 @@ docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo : t
 dotnet new gitignore : to create a git ignore file
 dotnet new classlib -n "name" : to create a class library
 dotnet nuget add source "Path" -n PlayEconomy : To add a local source of nuget packages.
+
+docker ps
+docker-compose up
+docker-compose up -d : to run the compose in a detached way (in background)

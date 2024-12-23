@@ -20,8 +20,8 @@ namespace Play.Common.MongoDB
             services.AddSingleton(serviceProvider =>
             {
                 var mongoDbSettings = configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
-                var mongoClient = new MongoClient(mongoDbSettings.ConnectionString);
-                return mongoClient.GetDatabase(serviceSettings.ServiceName);
+                var mongoClient = new MongoClient(mongoDbSettings!.ConnectionString);
+                return mongoClient.GetDatabase(serviceSettings!.ServiceName);
             });
 
             return services;
@@ -32,7 +32,7 @@ namespace Play.Common.MongoDB
             services.AddSingleton<IRepository<T>>(serviceProvider =>
             {
                 var database = serviceProvider.GetService<IMongoDatabase>();
-                return new MongoRepository<T>(database, collectionName);
+                return new MongoRepository<T>(database!, collectionName);
             });
 
             return services;
